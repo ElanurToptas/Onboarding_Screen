@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:shop_app_onboarding_screen/otpForm.dart';
 
-void main() {
+// ***** Video-1 *****
+/*void main() {
   runApp(const MaterialApp(
     home: OnBoardingScreen(),
   ));
 }
-
-
 class OnBoardingScreen extends StatefulWidget {
   const OnBoardingScreen({super.key});
 
@@ -192,4 +192,15 @@ class OnboardContent extends StatelessWidget {
       ],
     );
   }
+} */
+
+// ****** Video-2 *****
+void main() {
+  runApp(const MaterialApp(
+    home: Scaffold(
+        body: SafeArea(
+            child: otpForm(),
+        ),
+    ),
+  ));
 }
