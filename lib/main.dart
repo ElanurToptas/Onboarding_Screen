@@ -6,6 +6,7 @@ void main() {
   ));
 }
 
+
 class OnBoardingScreen extends StatefulWidget {
   const OnBoardingScreen({super.key});
 
@@ -93,19 +94,25 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
   }
 }
 
-class DoIndicator extends StatelessWidget {
+class DoIndicator extends StatefulWidget {
   DoIndicator({super.key, this.isActive = false});
-  Color primaryColor = Colors.blue;
   final bool isActive;
+
+  @override
+  State<DoIndicator> createState() => _DoIndicatorState();
+}
+
+class _DoIndicatorState extends State<DoIndicator> {
+  Color primaryColor = Colors.blue;
 
   @override
   Widget build(BuildContext context) {
     return AnimatedContainer(
       duration: const Duration(milliseconds: 300),
-        height: isActive ? 12 : 4,
+        height: widget.isActive ? 12 : 4,
         width: 4,
         decoration: BoxDecoration(
-          color: isActive ? primaryColor : primaryColor.withOpacity(0.4),
+          color: widget.isActive ? primaryColor : primaryColor.withOpacity(0.4),
           borderRadius: const BorderRadius.all(Radius.circular(12)),
         ));
   }
@@ -173,7 +180,7 @@ class OnboardContent extends StatelessWidget {
           style: Theme.of(
                   context) // mevcut bağlam (context) içindeki tema (theme) özelliklerine erişmeyi sağlar.
               .textTheme
-              .headline5!
+              .headlineSmall!
               .copyWith(fontWeight: FontWeight.w500),
         ),
         const SizedBox(height: 16),
