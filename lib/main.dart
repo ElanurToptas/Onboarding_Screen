@@ -95,7 +95,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
 }
 
 class DoIndicator extends StatefulWidget {
-  DoIndicator({super.key, this.isActive = false});
+ const DoIndicator({super.key, this.isActive = false});
   final bool isActive;
 
   @override
@@ -152,7 +152,7 @@ final List<Onboard> demo_data = [
       image: "asset/konum.png",
       title: "Nerby stores",
       description:
-          "Easily track nearby shpops, browse through their items and get "),
+          "Easily track nearby shops, browse through their items and get "),
 ];
 
 class OnboardContent extends StatelessWidget {
