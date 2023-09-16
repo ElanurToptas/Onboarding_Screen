@@ -198,6 +198,7 @@ class OnboardContent extends StatelessWidget {
 void main() {
   runApp(const MaterialApp(
     home: Scaffold(
+      backgroundColor: Colors.purple,
         body: SafeArea(
             child: otpForm(),
         ),
