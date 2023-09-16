@@ -94,6 +94,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
   }
 }
 
+
 class DoIndicator extends StatefulWidget {
   DoIndicator({super.key, this.isActive = false});
   final bool isActive;
