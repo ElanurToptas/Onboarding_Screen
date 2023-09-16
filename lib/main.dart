@@ -6,7 +6,6 @@ void main() {
   ));
 }
 
-
 class OnBoardingScreen extends StatefulWidget {
   const OnBoardingScreen({super.key});
 
